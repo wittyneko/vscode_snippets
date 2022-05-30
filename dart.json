@@ -1,0 +1,24 @@
+{
+	"Flutter SingleChildStatefulWidget Builder": {
+		"prefix": "cstfbuilder",
+		"description": "New SingleChildStatefulWidget",
+		"body": [
+			"class $1 extends SingleChildStatefulWidget {",
+			"  final TransitionBuilder? builder;",
+			"  const $1({",
+			"    Key? key,",
+			"    Widget? child,",
+			"    this.builder,",
+			"  }) : super(key: key, child: child);",
+			"  @override",
+			"  SingleChildState<$1> createState() => _$1State();",
+			"}",
+			"class _$1State extends SingleChildState<$1> {",
+			"  @override",
+			"  Widget buildWithChild(BuildContext context, Widget? child) {",
+			"    return widget.builder?.call(context, child) ?? child ?? const SizedBox();",
+			"  }",
+			"}",
+		]
+	},
+}
